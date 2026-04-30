@@ -1,4 +1,4 @@
-import logo from "../assets/logo.png";
+import Logo from "../assets/Logo.png";
 import { FiArrowRight } from "react-icons/fi";
 
 function Footer() {
@@ -8,7 +8,7 @@ function Footer() {
         <div className="grid gap-12 border-b border-white/10 pb-14 md:grid-cols-4">
           {/* Brand */}
           <div>
-            <img src={logo} alt="Redline Labs" className="mb-5 h-14 w-auto object-contain" />
+            <img src={Logo} alt="Redline Labs" className="mb-5 h-14 w-auto object-contain" />
 
             <p className="max-w-xs leading-7 text-gray-400">
               Pushing the boundaries of web development, one project at a time.
