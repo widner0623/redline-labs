@@ -16,10 +16,10 @@ function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="mx-auto max-w-5xl text-5xl font-bold leading-tight tracking-tight opacity-0 animate-[fadeUp_0.8s_ease-out_0.1s_forwards] md:text-7xl">
+        <h1 className="mx-auto max-w-5xl text-5xl font-bold leading-tight tracking-tight opacity-0 animate-[fadeUp_0.8s_ease-out_0.1s_forwards] md:text-7xl cursor-default">
           Building the Future,
           <br />
-          <span className="bg-gradient-to-r from-red-500 via-red-600 to-red-800 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-red-500 via-red-600 to-red-800 bg-clip-text text-transparent cursor-default">
             One Line at a Time
           </span>
         </h1>

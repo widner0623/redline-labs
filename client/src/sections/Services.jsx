@@ -43,7 +43,7 @@ function Services() {
   return (
     <section id="services" className="bg-white px-6 py-38 text-black">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 text-center">
+        <div className="mb-16 text-center cursor-default">
           <p className="mb-4 text-sm font-medium tracking-[0.25em] text-red-600">
             OUR SERVICES
           </p>
@@ -57,7 +57,7 @@ function Services() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 cursor-default">
           <ServiceCard
             delay="0ms"
             title="Web Development"
