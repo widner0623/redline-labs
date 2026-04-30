@@ -109,7 +109,7 @@ function About() {
         </div>
 
         {/* Why Choose */}
-        <div className="mt-24 text-center">
+        <div className="mt-24 text-center cursor-default">
           <h3 className="mb-10 text-3xl font-bold">
             Why Choose Redline Labs?
           </h3>

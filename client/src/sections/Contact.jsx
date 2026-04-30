@@ -4,7 +4,7 @@ import { FaFacebook, FaLinkedinIn, FaGithub } from "react-icons/fa6";
 
 function ContactCard({ icon: Icon, label, value }) {
   return (
-    <div className="group border-b-4 border-red-600 bg-white p-8 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+    <div className="cursor-default group border-b-4 border-red-600 bg-white p-8 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
       <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-red-50 text-3xl text-red-600 transition group-hover:scale-110">
         <Icon />
       </div>
@@ -69,7 +69,7 @@ function Contact() {
 
   return (
     <section id="contact" className="bg-white px-6 py-38 text-black">
-      <div className="mx-auto max-w-7xl">
+      <div className="cursor-default mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <p className="mb-5 text-sm font-medium tracking-[0.25em] text-red-600">
             GET IN TOUCH
