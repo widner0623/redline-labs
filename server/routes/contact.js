@@ -11,6 +11,14 @@ export const sendContactEmail = async (req, res) => {
       return res.status(400).json({ error: "All fields are required" });
     }
 
+    const phoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
+
+    if (!phoneRegex.test(phone)) {
+      return res.status(400).json({
+        error: "Phone number must be in the format (123) 456-7890",
+      });
+    }
+
     await Contact.create({
       name,
       phone,

@@ -25,10 +25,28 @@ function Contact() {
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
 
+  // phone formatter
+  const formatPhone = (value) => {
+    const digits = value.replace(/\D/g, "").slice(0, 10);
+
+    if (digits.length <= 3) {
+      return digits ? `(${digits}` : "";
+    }
+
+    if (digits.length <= 6) {
+      return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+    }
+
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+  };
+
+  // UPDATED
   const handleChange = (e) => {
+    const { name, value } = e.target;
+
     setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [name]: name === "phone" ? formatPhone(value) : value,
     }));
   };
 
@@ -36,6 +54,15 @@ function Contact() {
     e.preventDefault();
     setLoading(true);
     setStatus("");
+
+    // validation
+    const phoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
+
+    if (!phoneRegex.test(formData.phone)) {
+      setStatus("error");
+      setLoading(false);
+      return;
+    }
 
     try {
       const res = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
@@ -87,7 +114,7 @@ function Contact() {
         </div>
 
         <div className="mb-20 grid gap-8 md:grid-cols-3">
-          <ContactCard icon={FiMail} label="EMAIL" value="contact@redlinelabs.com" />
+          <ContactCard icon={FiMail} label="EMAIL" value="derrick.widner@icloud.com" />
           <ContactCard icon={FiPhone} label="PHONE" value="+1 (509) 336-8537" />
           <ContactCard icon={FiMessageCircle} label="LIVE CHAT" value="Coming Soon. . ." />
         </div>
@@ -149,6 +176,8 @@ function Contact() {
                 onChange={handleChange}
                 type="tel"
                 placeholder="(123) 456-7890"
+                pattern="\(\d{3}\) \d{3}-\d{4}"
+                maxLength="14"
                 required
                 className="w-full rounded-lg border border-gray-300 bg-gray-50 px-5 py-4 outline-none transition focus:scale-[1.01] focus:border-red-600 focus:bg-white"
               />
@@ -188,7 +217,7 @@ function Contact() {
 
             {status === "error" && (
               <p className="mb-4 rounded-lg bg-red-50 px-4 py-3 text-red-700">
-                Something went wrong. Please try again.
+                Please enter a valid phone number: (123) 456-7890
               </p>
             )}
 
