@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../assets/logo.png";
+import Logo from "../assets/Logo.png";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -12,7 +12,7 @@ function Navbar() {
           <div className="relative h-20 w-48 md:w-64">
           <a href="#hero" className="relative block h-20 w-48 md:w-64">
             <img
-              src={logo}
+              src={Logo}
               alt="Redline Labs"
               className="absolute left-0 top-1/2 -translate-y-1/2 h-30 md:h-38 w-auto object-contain cursor-pointer hover:opacity-80 transition"
             />
