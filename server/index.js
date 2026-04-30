@@ -13,7 +13,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173", // dev
-    "https://yourdomain.com" // production (change later)
+    "https://redline-labs.vercel.app" // production (change later)
   ],
   methods: ["POST", "GET"],
   credentials: true
