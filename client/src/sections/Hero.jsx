@@ -3,7 +3,7 @@ import FeatureCard from "../components/FeatureCard";
 
 function Hero() {
   return (
-    <section id="hero" className="relative overflow-hidden bg-black text-white">
+    <section id="hero" className="relative overflow-hidden py-15 bg-black text-white">
       {/* Background glow */}
       <div className="absolute left-1/2 top-20 h-96 w-96 -translate-x-1/2 rounded-full bg-red-600/20 blur-[120px]" />
       <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-red-900/20 blur-[120px]" />

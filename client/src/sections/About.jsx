@@ -1,10 +1,21 @@
 import { FiZap, FiPenTool, FiLock, FiTrendingUp } from "react-icons/fi";
+import useScrollAnimation from "../hooks/useScrollAnimation";
 
 function ValueCard({ icon: Icon, title, text, delay }) {
+  const {ref, visible } = useScrollAnimation({
+    threshold: 0,
+    rootMargin: "0px 0px -500px 0px",
+  });
+
   return (
     <div
-      style={{ animationDelay: delay }}
-      className="group opacity-0 animate-[slideInSoft_0.7s_ease-out_forwards] border border-gray-800 bg-[#0b0b0b] p-7 transition-all duration-300 hover:-translate-y-2 hover:border-red-600/70 hover:shadow-[0_0_35px_rgba(220,38,38,0.15)]"
+      ref={ref}
+      style={{ animationDelay: visible ? delay : "0ms" }}
+      className={`group border border-gray-800 bg-[#0b0b0b] p-7 transition-all duration-300 hover:-translate-y-2 hover:border-red-600/70 hover:shadow-[0_0_35px_rgba(220,38,38,0.15)] ${
+        visible
+          ? "opacity-100 animate-[slideInSoft_0.8s_cubic-bezier(0.22,1,0.36,1)_both]"
+          : "opacity-0"
+      }`}
     >
       <Icon className="mb-6 text-4xl text-red-500 transition-transform duration-300 group-hover:scale-110" />
 

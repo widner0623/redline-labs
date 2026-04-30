@@ -3,7 +3,7 @@
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(32px);
   }
 
   to {
@@ -30,7 +30,7 @@
 @keyframes slideInSoft {
   from {
     opacity: 0;
-    transform: translateX(-24px);
+    transform: translateX(-32px);
   }
 
   to {

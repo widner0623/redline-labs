@@ -45,7 +45,7 @@ function Navbar() {
       {/* Page Blur Overlay - click anywhere outside menu to close */}
       <div
         onClick={() => setOpen(false)}
-        className={`fixed inset-0 z-40 bg-black/70 backdrop-blur-md transition-all duration-300 md:hidden ${
+        className={`fixed inset-0 z-50 bg-black/70 backdrop-blur-md transition-all duration-300 md:hidden ${
           open
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
