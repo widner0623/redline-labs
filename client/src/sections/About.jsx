@@ -11,7 +11,7 @@ function ValueCard({ icon: Icon, title, text, delay }) {
     <div
       ref={ref}
       style={{ animationDelay: visible ? delay : "0ms" }}
-      className={`group border border-gray-800 bg-[#0b0b0b] p-7 transition-all duration-300 hover:-translate-y-2 hover:border-red-600/70 hover:shadow-[0_0_35px_rgba(220,38,38,0.15)] ${
+      className={`cursor-default group border border-gray-800 bg-[#0b0b0b] p-7 transition-all duration-300 hover:-translate-y-2 hover:border-red-600/70 hover:shadow-[0_0_35px_rgba(220,38,38,0.15)] ${
         visible
           ? "opacity-100 animate-[slideInSoft_0.8s_cubic-bezier(0.22,1,0.36,1)_both]"
           : "opacity-0"
@@ -35,7 +35,7 @@ function About() {
     <section id="about" className="bg-black px-6 py-38 text-white">
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
-        <div className="mb-16 text-center">
+        <div className="mb-16 text-center cursor-default">
           <p className="mb-5 text-sm font-medium tracking-[0.25em] text-red-600">
             ABOUT REDLINE LABS
           </p>
@@ -99,7 +99,7 @@ function About() {
             ].map(([name, type]) => (
               <div
                 key={name}
-                className="border border-gray-800 bg-[#0b0b0b] px-6 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-red-600/70 hover:shadow-[0_0_25px_rgba(220,38,38,0.12)]"
+                className="cursor-default border border-gray-800 bg-[#0b0b0b] px-6 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-red-600/70 hover:shadow-[0_0_25px_rgba(220,38,38,0.12)]"
               >
                 <p className="text-lg text-white">{name}</p>
                 <p className="mt-1 text-sm text-gray-500">{type}</p>
