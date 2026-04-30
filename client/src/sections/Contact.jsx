@@ -115,13 +115,13 @@ function Contact() {
             <h4 className="mb-4 font-bold">Connect With Me</h4>
 
             <div className="flex gap-3">
-              <a href="#" target="_blank" rel="noreferrer" className="rounded-full text-2xl flex h-12 w-12 items-center justify-center bg-black text-white transition hover:bg-red-600">
+              <a href="https://facebook.com/derrick.widner.7/" target="_blank" rel="noreferrer" className="rounded-full text-2xl flex h-12 w-12 items-center justify-center bg-black text-white transition hover:bg-red-600">
                 <FaFacebook />
               </a>
               <a href="#" target="_blank" rel="noreferrer" className="rounded-full text-2xl flex h-12 w-12 items-center justify-center bg-black text-white transition hover:bg-red-600">
                 <FaLinkedinIn />
               </a>
-              <a href="#" target="_blank" rel="noreferrer" className="rounded-full text-2xl flex h-12 w-12 items-center justify-center bg-black text-white transition hover:bg-red-600">
+              <a href="https://github.com/widner0623/" target="_blank" rel="noreferrer" className="rounded-full text-2xl flex h-12 w-12 items-center justify-center bg-black text-white transition hover:bg-red-600">
                 <FaGithub />
               </a>
             </div>
