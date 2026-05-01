@@ -17,10 +17,10 @@ function Hero() {
 
         {/* Headline */}
         <h1 className="mx-auto max-w-5xl text-5xl font-bold leading-tight tracking-tight opacity-0 animate-[fadeUp_0.8s_ease-out_0.1s_forwards] md:text-7xl cursor-default">
-          Building the Future,
+          Custom Website Development in Kentucky,
           <br />
           <span className="bg-gradient-to-r from-red-500 via-red-600 to-red-800 bg-clip-text text-transparent cursor-default">
-            One Line at a Time
+            Built One Line at a Time
           </span>
         </h1>
 
@@ -29,6 +29,9 @@ function Hero() {
           Custom websites, business systems, and digital solutions built for
           speed, clarity, and growth. Redline Labs helps businesses turn ideas
           into powerful online experiences.
+        </p>
+        <p className="sr-only">
+          Redline Labs is a Kentucky-based web developer offering custom websites, business systems, and digital solutions for small businesses in Owensboro, Bowling Green and surrounding areas.
         </p>
 
         {/* Buttons */}
