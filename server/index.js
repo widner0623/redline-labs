@@ -28,7 +28,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 // 🔥 Routes
 app.get("/", (req, res) => {
-  res.send("Redline Labs API is running");
+  res.send("Redline Systems Co API is running");
 });
 
 app.post("/api/contact", sendContactEmail);

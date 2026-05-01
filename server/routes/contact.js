@@ -30,12 +30,12 @@ export const sendContactEmail = async (req, res) => {
     await resend.emails.send({
       from: process.env.EMAIL_FROM,
       to: [process.env.EMAIL_TO],
-      subject: `New Redline Labs Project Inquiry from ${name}`,
+      subject: `New Redline Systems Co Project Inquiry from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; background:#0b0b0b; padding:30px;">
           <div style="max-width:650px; margin:auto; background:#ffffff; padding:30px; border-radius:12px;">
             <h1 style="color:#dc2626; margin-bottom:10px;">New Project Inquiry</h1>
-            <p style="color:#555;">A new lead submitted the Redline Labs contact form.</p>
+            <p style="color:#555;">A new lead submitted the Redline Systems Co contact form.</p>
 
             <hr style="margin:25px 0;" />
 
@@ -49,7 +49,7 @@ export const sendContactEmail = async (req, res) => {
             <hr style="margin:25px 0;" />
 
             <p style="font-size:13px; color:#777;">
-              Sent from the Redline Labs website contact form.
+              Sent from the Redline Systems Co website contact form.
             </p>
           </div>
         </div>
@@ -60,14 +60,14 @@ export const sendContactEmail = async (req, res) => {
     await resend.emails.send({
       from: process.env.EMAIL_FROM,
       to: [email],
-      subject: "We received your message — Redline Labs",
+      subject: "We received your message — Redline Systems Co",
       html: `
         <div style="font-family: Arial, sans-serif; background:#0b0b0b; padding:30px;">
           <div style="max-width:650px; margin:auto; background:#ffffff; padding:30px; border-radius:12px;">
             <h1 style="color:#dc2626;">Thanks for reaching out, ${name}.</h1>
 
             <p style="line-height:1.6; color:#333;">
-              Your message has been received by Redline Labs. I’ll review your project details and get back to you as soon as possible.
+              Your message has been received by Redline Systems Co. I’ll review your project details and get back to you as soon as possible.
             </p>
 
             <p style="line-height:1.6; color:#333;">
@@ -85,13 +85,13 @@ export const sendContactEmail = async (req, res) => {
             <p style="line-height:1.6; color:#333;">
               Talk soon,<br />
               <strong>Derrick Widner</strong><br />
-              Redline Labs
+              Redline Systems Co
             </p>
 
             <hr style="margin:25px 0;" />
 
             <p style="font-size:13px; color:#777;">
-              This is an automated confirmation email from Redline Labs.
+              This is an automated confirmation email from Redline Systems Co.
             </p>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/NavLogo.png";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -9,12 +9,12 @@ function Navbar() {
       <nav className="fixed top-0 left-0 z-50 w-full border-b border-red-600/20 bg-black/90 backdrop-blur-md">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-6 relative">
           {/* Logo */}
-          <div className="relative h-20 w-48 md:w-64">
-          <a href="#hero" className="relative block h-20 w-48 md:w-64">
+          <div className="relative h-15 w-48 md:w-64">
+          <a href="#hero" className="relative block h-20 w-48 md:w-54">
             <img
               src={Logo}
-              alt="Redline Labs"
-              className="absolute left-0 top-1/2 -translate-y-1/2 h-30 md:h-38 w-auto object-contain cursor-pointer hover:opacity-80 transition"
+              alt="Redline Systems Co"
+              className="absolute left-0 top-1/3 -translate-y-1/2 h-30 md:h-38 w-auto object-contain cursor-pointer hover:opacity-80 transition"
             />
           </a>
           </div>

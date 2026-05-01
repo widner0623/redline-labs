@@ -1,4 +1,4 @@
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/FootLogo.png";
 import { FiArrowRight } from "react-icons/fi";
 
 function Footer() {
@@ -8,7 +8,7 @@ function Footer() {
         <div className="grid gap-12 border-b border-white/10 pb-14 md:grid-cols-4">
           {/* Brand */}
           <div>
-            <img src={Logo} alt="Redline Labs" className="mb-5 h-14 w-auto object-contain" />
+            <img src={Logo} alt="Redline Systems Co" className="mb-5 h-14 w-auto object-contain" />
 
             <p className="max-w-xs leading-7 text-gray-400">
               Pushing the boundaries of web development, one project at a time.
@@ -67,7 +67,7 @@ function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-col gap-5 pt-8 text-sm text-gray-500 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 Redline Labs. All rights reserved.</p>
+          <p>© 2026 Redline Systems Co. All rights reserved.</p>
 
           <div className="flex gap-8">
             <a href="/PrivacyPolicy.pdf" target="_blank" className="transition hover:text-red-500">Privacy Policy</a>

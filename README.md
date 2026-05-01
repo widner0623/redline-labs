@@ -1,2 +1,2 @@
 # redline-labs
-Official website for Redline Labs — custom web development and digital solutions.
+Official website for Redline Systems Co — custom web development and digital solutions.

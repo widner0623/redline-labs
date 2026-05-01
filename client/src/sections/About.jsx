@@ -4,7 +4,7 @@ import useScrollAnimation from "../hooks/useScrollAnimation";
 function ValueCard({ icon: Icon, title, text, delay }) {
   const {ref, visible } = useScrollAnimation({
     threshold: 0,
-    rootMargin: "0px 0px -500px 0px",
+    rootMargin: "0px 0px -300px 0px",
   });
 
   return (
@@ -37,7 +37,7 @@ function About() {
         {/* Heading */}
         <div className="mb-16 text-center cursor-default">
           <p className="mb-5 text-sm font-medium tracking-[0.25em] text-red-600">
-            ABOUT REDLINE LABS
+            ABOUT Redline Systems Co
           </p>
 
           <h2 className="text-4xl font-bold tracking-tight md:text-6xl">
@@ -111,7 +111,7 @@ function About() {
         {/* Why Choose */}
         <div className="mt-24 text-center cursor-default">
           <h3 className="mb-10 text-3xl font-bold">
-            Why Choose Redline Labs?
+            Why Choose Redline Systems Co?
           </h3>
 
           <div className="grid gap-8 md:grid-cols-3">

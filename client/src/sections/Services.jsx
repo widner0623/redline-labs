@@ -4,7 +4,7 @@ import useScrollAnimation from "../hooks/useScrollAnimation";
 function ServiceCard({ title, description, items, delay = "0ms" }) {
   const { ref, visible } = useScrollAnimation({
     threshold: 0,
-    rootMargin: "0px 0px -450px 0px",
+    rootMargin: "0px 0px -300px 0px",
   });
 
   return (
