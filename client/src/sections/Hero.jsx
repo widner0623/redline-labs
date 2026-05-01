@@ -28,7 +28,7 @@ function Hero() {
         <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-400 opacity-0 animate-[fadeUp_0.8s_ease-out_0.2s_forwards] md:text-lg">
           Custom websites, business systems, and digital solutions built for
           speed, clarity, and growth. Redline Labs helps businesses turn ideas
-          into powerful online experiences.
+          into powerful online experiences. 
         </p>
         <p className="sr-only">
           Redline Labs is a Kentucky based web developer offering custom websites, business systems, and digital solutions for small businesses in Owensboro, Bowling Green and surrounding areas.
