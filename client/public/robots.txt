@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://redline-labs.vercel.app/sitemap.xml
+Sitemap: https://redlinesystemsco.com/sitemap.xml
