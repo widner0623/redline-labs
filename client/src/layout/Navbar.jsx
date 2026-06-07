@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/NavLogo.png";
 
 function Navbar() {
@@ -9,32 +10,39 @@ function Navbar() {
       <nav className="fixed top-0 left-0 z-50 w-full border-b border-red-600/20 bg-black/90 backdrop-blur-md">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-6 relative">
           {/* Logo */}
-          <div className="relative h-15 w-48 md:w-64">
-          <a href="#hero" className="relative block h-20 w-48 md:w-54">
+          <div className="relative h-15 w-48 lg:w-64">
+          <Link 
+            to="/"
+            onClick={() => {
+              setOpen(false);
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            }} 
+            className="relative block h-20 w-48 lg:w-54">
             <img
               src={Logo}
               alt="Redline Systems Co"
-              className="absolute left-0 top-1/3 -translate-y-1/2 h-30 md:h-38 w-auto object-contain cursor-pointer hover:opacity-80 transition"
+              className="absolute left-0 top-1/3 -translate-y-1/2 h-30 lg:h-38 w-auto object-contain cursor-pointer hover:opacity-80 transition"
             />
-          </a>
+          </Link>
           </div>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex gap-10 text-xl font-medium text-gray-300">
-            <a href="#services" className="hover:text-white transition">Services</a>
-            <a href="#about" className="hover:text-white transition">About</a>
-            <a href="#contact" className="hover:text-white transition">Contact</a>
+          <div className="hidden lg:flex gap-10 text-xl font-medium text-gray-300">
+            <a href="/#services" className="hover:text-white transition">Services</a>
+            <a href="/#about" className="hover:text-white transition">About</a>
+            <Link to="/projects" className="hover:text-white transition">Projects</Link>
+            <a href="/#contact" className="hover:text-white transition">Contact</a>
           </div>
 
           {/* Desktop CTA */}
-          <button className="hidden md:block bg-red-600 hover:bg-red-700 hover:scale-105 text-white px-6 py-3 text-lg font-semibold rounded transition">
+          <button className="hidden lg:block bg-red-600 hover:bg-red-700 hover:scale-105 text-white px-6 py-3 text-lg font-semibold rounded transition">
             Get Started
           </button>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setOpen(true)}
-            className="md:hidden text-white text-3xl hover:text-red-500 transition"
+            className="lg:hidden text-white text-3xl hover:text-red-500 transition"
             aria-label="Open menu"
           >
             ☰
@@ -45,7 +53,7 @@ function Navbar() {
       {/* Page Blur Overlay - click anywhere outside menu to close */}
       <div
         onClick={() => setOpen(false)}
-        className={`fixed inset-0 z-50 bg-black/70 backdrop-blur-md transition-all duration-300 md:hidden ${
+        className={`fixed inset-0 z-50 bg-black/70 backdrop-blur-md transition-all duration-300 lg:hidden ${
           open
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -54,7 +62,7 @@ function Navbar() {
 
       {/* Mobile Side Menu */}
       <aside
-        className={`fixed top-0 right-0 z-50 h-screen w-[82%] max-w-sm border-l border-red-600/20 bg-black/95 shadow-[-20px_0_60px_rgba(220,38,38,0.15)] backdrop-blur-xl transition-all duration-300 ease-out md:hidden ${
+        className={`fixed top-0 right-0 z-50 h-screen w-[82%] max-w-sm border-l border-red-600/20 bg-black/95 shadow-[-20px_0_60px_rgba(220,38,38,0.15)] backdrop-blur-xl transition-all duration-300 ease-out lg:hidden ${
           open
             ? "translate-x-0 opacity-100 scale-100"
             : "translate-x-full opacity-0 scale-95 pointer-events-none"
@@ -81,7 +89,7 @@ function Navbar() {
         <div className="relative flex flex-col gap-8 px-8 pt-16 text-white">
           <a
             onClick={() => setOpen(false)}
-            href="#services"
+            href="/#services"
             className="text-3xl font-semibold hover:text-red-500 transition"
           >
             Services
@@ -89,15 +97,23 @@ function Navbar() {
 
           <a
             onClick={() => setOpen(false)}
-            href="#about"
+            href="/#about"
             className="text-3xl font-semibold hover:text-red-500 transition"
           >
             About
           </a>
+          
+          <Link
+            onClick={() => setOpen(false)}
+            to="/projects"
+            className="text-3xl font-semibold hover:text-red-500 transition"
+          >
+            Projects
+          </Link>
 
           <a
             onClick={() => setOpen(false)}
-            href="#contact"
+            href="/#contact"
             className="text-3xl font-semibold hover:text-red-500 transition"
           >
             Contact
