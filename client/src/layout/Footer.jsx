@@ -1,5 +1,6 @@
 import Logo from "../assets/FootLogo.png";
 import { FiArrowRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -20,10 +21,10 @@ function Footer() {
             <h3 className="mb-5 font-semibold">Services</h3>
 
             <ul className="space-y-3 text-gray-400">
-              <li><a href="#services" className="hover:text-red-500 transition">Web Development</a></li>
-              <li><a href="#services" className="hover:text-red-500 transition">Frontend Development</a></li>
-              <li><a href="#services" className="hover:text-red-500 transition">UI/UX Design</a></li>
-              <li><a href="#services" className="hover:text-red-500 transition">Backend Development</a></li>
+              <li><a href="/#services" className="hover:text-red-500 transition">Web Development</a></li>
+              <li><a href="/#services" className="hover:text-red-500 transition">Frontend Development</a></li>
+              <li><a href="/#services" className="hover:text-red-500 transition">UI/UX Design</a></li>
+              <li><a href="/#services" className="hover:text-red-500 transition">Backend Development</a></li>
             </ul>
           </div>
 
@@ -32,10 +33,10 @@ function Footer() {
             <h3 className="mb-5 font-semibold">Company</h3>
 
             <ul className="space-y-3 text-gray-400">
-              <li><a href="#about" className="hover:text-red-500 transition">About Us</a></li>
-              <li><a href="#services" className="hover:text-red-500 transition">Portfolio</a></li>
-              <li><a href="#contact" className="hover:text-red-500 transition">Careers</a></li>
-              <li><a href="#contact" className="hover:text-red-500 transition">Contact</a></li>
+              <li><a href="/#about" className="hover:text-red-500 transition">About Us</a></li>
+              <li><Link to="/projects" className="hover:text-red-500 transition">Projects</Link></li>
+              <li><a href="/#contact" className="hover:text-red-500 transition">Careers</a></li>
+              <li><a href="/#contact" className="hover:text-red-500 transition">Contact</a></li>
             </ul>
           </div>
 

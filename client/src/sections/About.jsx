@@ -91,11 +91,11 @@ function About() {
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
             {[
               ["React", "Frontend"],
-              ["Next.js", "Framework"],
+              ["Vite", "Build Tool"],
               ["Node.js", "Backend"],
               ["TypeScript", "Language"],
               ["Tailwind CSS", "Styling"],
-              ["PostgreSQL", "Database"],
+              ["MongoDB", "Database"],
             ].map(([name, type]) => (
               <div
                 key={name}
