@@ -72,7 +72,7 @@ function Footer() {
 
           <div className="flex gap-8">
             <a href="/PrivacyPolicy.pdf" target="_blank" className="transition hover:text-red-500">Privacy Policy</a>
-            <a href="/TermOfUse.pdf" target="_blank" className="transition hover:text-red-500">Terms of Service</a>
+            <a href="/TermsOfUse.pdf" target="_blank" className="transition hover:text-red-500">Terms of Service</a>
           </div>
         </div>
       </div>
