@@ -18,7 +18,7 @@ function Hero() {
 
         {/* Headline */}
         <h1 className="mx-auto max-w-5xl text-5xl font-bold leading-tight tracking-tight opacity-0 animate-[fadeUp_0.8s_ease-out_0.1s_forwards] md:text-7xl cursor-default">
-          Custom Website Development in 
+          Custom Website Development <br /> in 
           <TypeAnimation
             sequence={[
               " Kentucky", 2000,
