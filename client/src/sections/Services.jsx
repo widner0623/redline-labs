@@ -60,44 +60,44 @@ function Services() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 cursor-default">
           <ServiceCard
             delay="0ms"
-            title="Web Development"
-            description="Custom websites and web applications built with modern technologies like React, Next.js, and Node.js."
-            items={["Responsive Design", "Performance Optimization", "SEO-Friendly"]}
+            title="Custom Websites"
+            description="Professional websites designed to establish credibility, generate leads, and help businesses grow online."
+            items={["Responsive Design", "SEO Ready", "Fast Loading"]}
           />
 
           <ServiceCard
             delay="120ms"
-            title="UI/UX Design"
-            description="Beautiful, intuitive interfaces that users love and that align with your brand identity."
-            items={["User Research", "Prototyping", "Design Systems"]}
+            title="Web Applications"
+            description="Custom web applications built to streamline workflows, automate processes, and improve efficiency."
+            items={["Dashboards", "Client Portals", "Custom Systems"]}
           />
 
           <ServiceCard
             delay="220ms"
             title="Frontend Development"
-            description="Dynamic, interactive user interfaces built with cutting-edge JavaScript frameworks."
-            items={["React & Next.js", "TypeScript", "Tailwind CSS"]}
+            description="Modern user interfaces build with React and today's leading frontend technologies."
+            items={["React", "Tailwind CSS", "Responsive Design"]}
           />
 
           <ServiceCard
             delay="320ms"
             title="Backend Development"
-            description="Robust server-side solutions and APIs that power your applications reliably."
-            items={["RESTful APIs", "Database Design", "Authentication"]}
+            description="Secure and scalable server-side solutions powering modern web applications."
+            items={["APIs", "Authentication", "Database Design"]}
           />
 
           <ServiceCard
             delay="420ms"
-            title="Web Applications"
-            description="Full-stack web applications with seamless user experiences and powerful functionality."
-            items={["Real-time Features", "Cloud Integration", "Scalable Architecture"]}
+            title="Website Optimization"
+            description="Improve website speed, performance, accessibility, and search engine visibility."
+            items={["SEO", "Performance", "Accessibility"]}
           />
 
           <ServiceCard
             delay="520ms"
-            title="Consulting & Strategy"
-            description="Expert guidance to help you make the right technical decisions for your business."
-            items={["Tech Stack Selection", "Architecture Planning", "Code Reviews"]}
+            title="Technical Consulting"
+            description="Guidance and technical expertise to help businesses make smarter digital decisions."
+            items={["Planning", "Architecture", "Reviews"]}
           />
         </div>
       </div>

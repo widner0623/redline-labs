@@ -1,4 +1,5 @@
 import { FiArrowRight, FiCode, FiZap, FiLayers } from "react-icons/fi";
+import { TypeAnimation } from "react-type-animation";
 import FeatureCard from "../components/FeatureCard";
 
 function Hero() {
@@ -17,7 +18,21 @@ function Hero() {
 
         {/* Headline */}
         <h1 className="mx-auto max-w-5xl text-5xl font-bold leading-tight tracking-tight opacity-0 animate-[fadeUp_0.8s_ease-out_0.1s_forwards] md:text-7xl cursor-default">
-          Custom Website Development in Kentucky,
+          Custom Website Development in 
+          <TypeAnimation
+            sequence={[
+              " Kentucky", 2000,
+              " Tennessee", 2000,
+              " Indiana", 2000,
+              " Ohio", 2000,
+              " Illinois", 2000,
+              " Missouri", 2000,
+              " West Virginia", 2000,
+            ]}
+            wrapper="span"
+            speed={60}
+            repeat={Infinity}
+          />
           <br />
           <span className="bg-gradient-to-r from-red-500 via-red-600 to-red-800 bg-clip-text text-transparent cursor-default">
             Built One Line at a Time

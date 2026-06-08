@@ -121,7 +121,7 @@ const Projects = () => {
         <title>Projects | Redline Systems Co.</title>
         <meta
           name="description"
-          content="Explore websites, applications, and technology projects built by Redline Systems Co."
+          content="Explore websites, web applications, and technology projects built by Redline Systems Co."
         />
       </Helmet>
 

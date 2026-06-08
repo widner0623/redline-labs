@@ -1,4 +1,4 @@
-import { FiZap, FiPenTool, FiLock, FiTrendingUp } from "react-icons/fi";
+import { FiZap, FiLock, FiTrendingUp, FiMonitor } from "react-icons/fi";
 import useScrollAnimation from "../hooks/useScrollAnimation";
 
 function ValueCard({ icon: Icon, title, text, delay }) {
@@ -37,7 +37,7 @@ function About() {
         {/* Heading */}
         <div className="mb-16 text-center cursor-default">
           <p className="mb-5 text-sm font-medium tracking-[0.25em] text-red-600">
-            ABOUT Redline Systems Co
+            ABOUT REDLINE SYSTEMS CO.
           </p>
 
           <h2 className="text-4xl font-bold tracking-tight md:text-6xl">
@@ -45,9 +45,9 @@ function About() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
-            A modern web development studio focused on creating exceptional
-            digital experiences through clean code, stunning design, and
-            cutting-edge technology.
+            Custom websites, web applications, and digital solutions
+            designed to help businesses attract customers, build
+            credibility, and grow online.
           </p>
         </div>
 
@@ -56,28 +56,28 @@ function About() {
           <ValueCard
             icon={FiZap}
             title="Performance First"
-            text="Optimized code for lightning-fast load times"
+            text="Fast, optimized websites designed to deliver exceptional user experiences and strong performance."
             delay="0ms"
           />
 
           <ValueCard
-            icon={FiPenTool}
-            title="Pixel Perfect"
-            text="Designs that look stunning on every device"
+            icon={FiMonitor}
+            title="Responsive Design"
+            text="Professional designs that look and function flawlessly across desktop, tablet, and mobile devices."
             delay="100ms"
           />
 
           <ValueCard
             icon={FiLock}
             title="Secure by Default"
-            text="Built with security best practices from day one"
+            text="Built using modern security practices to help protect your business, data, and customers."
             delay="200ms"
           />
 
           <ValueCard
             icon={FiTrendingUp}
             title="Scalable Architecture"
-            text="Solutions that grow with your business"
+            text="Flexible solutions designed to support growth, new features, and evolving business needs."
             delay="300ms"
           />
         </div>
@@ -120,25 +120,25 @@ function About() {
                 Direct Communication
               </h4>
               <p className="mx-auto max-w-xs leading-7 text-gray-400">
-                Work directly with an experienced developer, no middlemen or account managers.
+                Work directly with the developer building your project, ensuring clear communication and faster results.
               </p>
             </div>
 
             <div>
               <h4 className="mb-3 text-xl font-semibold text-red-600">
-                Agile & Flexible
+                Built Around Your Business
               </h4>
               <p className="mx-auto max-w-xs leading-7 text-gray-400">
-                Quick iterations and adaptable processes that fit your timeline and budget.
+                Every project is tailored to your goals, audience, and workflow rather than relying on one-size-fits-all solutions.
               </p>
             </div>
 
             <div>
               <h4 className="mb-3 text-xl font-semibold text-red-600">
-                Quality Focused
+                Quality That Lasts
               </h4>
               <p className="mx-auto max-w-xs leading-7 text-gray-400">
-                Every line of code is crafted with care, ensuring long-term maintainability.
+                Clean code, modern technologies, and scalable architecture built to support your business long-term.
               </p>
             </div>
           </div>
