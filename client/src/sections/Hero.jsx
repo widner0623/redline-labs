@@ -1,5 +1,6 @@
 import { FiArrowRight, FiCode, FiZap, FiLayers } from "react-icons/fi";
 import { TypeAnimation } from "react-type-animation";
+import { Link } from "react-router-dom";
 import FeatureCard from "../components/FeatureCard";
 
 function Hero() {
@@ -59,12 +60,12 @@ function Hero() {
             <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
           </a>
 
-          <a
-            href="#services"
+          <Link
+            to="/pricing"
             className="rounded-lg border border-gray-700 px-7 py-4 text-lg font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:border-red-600/70 hover:bg-white/5"
           >
-            View Services
-          </a>
+            View Pricing
+          </Link>
         </div>
 
         {/* Cards */}

@@ -16,27 +16,27 @@ function Footer() {
             </p>
           </div>
 
-          {/* Services */}
+          {/* Resources */}
           <div>
-            <h3 className="mb-5 font-semibold">Services</h3>
+            <h3 className="mb-5 font-semibold">Resources</h3>
 
             <ul className="space-y-3 text-gray-400">
-              <li><a href="/#services" className="hover:text-red-500 transition">Web Development</a></li>
-              <li><a href="/#services" className="hover:text-red-500 transition">Frontend Development</a></li>
-              <li><a href="/#services" className="hover:text-red-500 transition">UI/UX Design</a></li>
-              <li><a href="/#services" className="hover:text-red-500 transition">Backend Development</a></li>
+              <li><Link to="/pricing" className="hover:text-red-500 transition">Pricing</Link></li>
+              <li><Link to="/faq" className="hover:text-red-500 transition">FAQ</Link></li>
+              <li><Link to="/blog" className="hover:text-red-500 transition">Blog</Link></li>
+              <li><Link to="/support" className="hover:text-red-500 transition">Support</Link></li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Products */}
           <div>
-            <h3 className="mb-5 font-semibold">Company</h3>
+            <h3 className="mb-5 font-semibold">Products</h3>
 
             <ul className="space-y-3 text-gray-400">
-              <li><a href="/#about" className="hover:text-red-500 transition">About Us</a></li>
-              <li><Link to="/projects" className="hover:text-red-500 transition">Projects</Link></li>
-              <li><a href="/#contact" className="hover:text-red-500 transition">Careers</a></li>
-              <li><a href="/#contact" className="hover:text-red-500 transition">Contact</a></li>
+              <li><Link to="/website-audit" className="hover:text-red-500 transition">Website Audit</Link></li>
+              <li><Link to="/shop" className="hover:text-red-500 transition">Shop</Link></li>
+              <li><Link to="/templates" className="hover:text-red-500 transition">Templates</Link></li>
+              <li><Link to="/displayos" className="hover:text-red-500 transition">DisplayOS</Link></li>
             </ul>
           </div>
 

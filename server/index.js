@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 
 import { sendContactEmail } from "./routes/contact.js";
+import { sendAuditRequest } from "./routes/audit.js";
 
 dotenv.config();
 
@@ -32,6 +33,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/api/contact", sendContactEmail);
+app.post("/api/audit", sendAuditRequest);
 
 // 🔥 Start Server
 const PORT = process.env.PORT || 5000;
