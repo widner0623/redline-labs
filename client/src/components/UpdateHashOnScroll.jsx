@@ -6,6 +6,7 @@ const pageSections = {
   "/pricing": ["packages", "audit-form"],
   "/website-audit": ["audit-form"],
   "/templates": ["templates"],
+  "/blog": ["future-posts"],
 };
 
 const UpdateHashOnScroll = () => {

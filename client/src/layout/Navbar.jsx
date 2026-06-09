@@ -35,9 +35,9 @@ function Navbar() {
           </div>
 
           {/* Desktop CTA */}
-          <button className="hidden lg:block bg-red-600 hover:bg-red-700 hover:scale-105 text-white px-6 py-3 text-lg font-semibold rounded transition">
-            Get Started
-          </button>
+          <Link to="/website-audit" className="hidden lg:block bg-red-600 hover:bg-red-700 hover:scale-105 text-white px-6 py-3 text-lg font-semibold rounded transition">
+            Request Audit
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -119,12 +119,13 @@ function Navbar() {
             Contact
           </a>
 
-          <button
+          <Link
+            to="/website-audit"
             onClick={() => setOpen(false)}
             className="mt-6 bg-red-600 hover:bg-red-700 hover:scale-105 text-white px-8 py-4 text-lg font-semibold rounded transition shadow-[0_0_30px_rgba(220,38,38,0.35)]"
           >
-            Get Started
-          </button>
+            Request Audit
+          </Link>
         </div>
       </aside>
     </>
