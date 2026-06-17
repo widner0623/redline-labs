@@ -27,6 +27,7 @@ function Hero() {
               " Indiana", 2000,
               " Ohio", 2000,
               " Illinois", 2000,
+              " Georgia", 2000,
               " Missouri", 2000,
               " West Virginia", 2000,
             ]}

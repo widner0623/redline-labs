@@ -12,7 +12,12 @@ import {
   FiImage,
   FiBarChart2,
   FiTv,
+  FiExternalLink,
+  FiShield,
+  FiCreditCard,
 } from "react-icons/fi";
+
+const DISPLAYOS_URL = "https://displayos.vercel.app";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -36,42 +41,49 @@ const features = [
   {
     icon: FiGrid,
     title: "Custom Display Layouts",
-    text: "Create digital signs for menus, services, announcements, wait times, promotions, business hours, and more.",
+    text: "Create digital displays for menus, services, announcements, wait times, promotions, business hours, QR codes, weather, and more.",
   },
   {
     icon: FiSettings,
     title: "Easy Content Control",
-    text: "Update what appears on your display without needing to edit code or rebuild the entire website.",
+    text: "Update what appears on your display from a dashboard without needing to edit code, rebuild a website, or manually update a TV screen.",
   },
   {
     icon: FiImage,
-    title: "Slides & Promotions",
-    text: "Show rotating slides for ads, gift cards, events, featured services, seasonal offers, or important updates.",
+    title: "Slides, Media & Promotions",
+    text: "Show images, promotional content, featured services, announcements, special offers, business updates, and branded display sections.",
   },
   {
     icon: FiBarChart2,
-    title: "Live Business Data",
-    text: "Display useful real-time information like status, wait times, availability, featured services, or future integrations.",
+    title: "Live Business Updates",
+    text: "Publish display changes, update status, adjust wait times, edit announcements, and manage customer-facing information from anywhere.",
   },
   {
     icon: FiTv,
-    title: "Built for Screens",
-    text: "Designed for TVs, lobby displays, waiting rooms, barbershops, offices, restaurants, stores, and public spaces.",
+    title: "Built for Real Screens",
+    text: "Designed for TVs, lobby displays, waiting rooms, barbershops, offices, restaurants, retail stores, churches, and public spaces.",
   },
   {
     icon: FiWifi,
-    title: "Web-Based System",
-    text: "DisplayOS is planned as a browser-based platform, making it easier to run on devices with web access.",
+    title: "Browser-Based Platform",
+    text: "Run displays through a web browser on compatible TVs, computers, tablets, monitors, or streaming-device browsers.",
   },
 ];
 
 const useCases = [
-  "Barbershops showing wait times, services, and shop status",
-  "Restaurants displaying menus, specials, and announcements",
-  "Offices showing welcome screens and company updates",
-  "Retail shops promoting products, deals, and events",
-  "Waiting rooms displaying information and rotating slides",
-  "Local businesses replacing printed signs with digital displays",
+  "Barbershops showing wait times, services, QR codes, and shop status",
+  "Restaurants displaying menus, specials, hours, and announcements",
+  "Offices showing welcome screens, updates, and company information",
+  "Retail shops promoting products, deals, events, and featured items",
+  "Waiting rooms displaying useful information and rotating content",
+  "Local businesses replacing outdated printed signs with live digital displays",
+];
+
+const betaHighlights = [
+  "Private beta access is open for selected businesses",
+  "Stripe billing and plan management are already connected",
+  "Published displays receive live public display links",
+  "Draft displays stay protected until published",
 ];
 
 const DisplayOS = () => {
@@ -81,18 +93,17 @@ const DisplayOS = () => {
         <title>DisplayOS | Redline Systems Co.</title>
         <meta
           name="description"
-          content="DisplayOS is an in-development digital display platform by Redline Systems Co. for businesses that need custom screens, digital signage, announcements, promotions, menus, wait times, and live updates."
+          content="DisplayOS is a digital signage platform by Redline Systems Co. that helps businesses create, publish, and manage live digital displays for TVs, monitors, tablets, waiting rooms, restaurants, barbershops, offices, and retail spaces."
         />
         <link rel="canonical" href="https://redlinesystemsco.com/displayos" />
       </Helmet>
 
       <main className="min-h-screen bg-black px-6 py-24 text-white">
         <section className="mx-auto max-w-7xl">
-          {/* Hero */}
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <motion.div variants={fadeUp} initial="hidden" animate="show">
               <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-red-500">
-                DisplayOS
+                DisplayOS by Redline Systems Co.
               </p>
 
               <h1 className="text-4xl font-bold leading-tight md:text-6xl">
@@ -100,26 +111,40 @@ const DisplayOS = () => {
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-400">
-                DisplayOS is an in-development web-based display system designed
-                to help businesses show live information, promotions, menus,
-                announcements, wait times, services, images, and updates on TVs
-                or digital screens.
+                DisplayOS helps businesses turn TVs, monitors, tablets, and
+                browser-based screens into professional digital displays for
+                announcements, menus, promotions, wait times, QR codes, business
+                hours, weather, images, and live updates.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href="/#contact"
+                  href={DISPLAYOS_URL}
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded bg-red-600 px-7 py-4 font-semibold text-white transition hover:bg-red-700"
                 >
-                  Join Waitlist <FiArrowRight />
+                  Visit DisplayOS <FiExternalLink />
                 </a>
 
                 <Link
-                  to="/pricing"
-                  className="inline-flex items-center justify-center rounded border border-white/15 px-7 py-4 font-semibold text-white transition hover:border-red-600 hover:text-red-500"
+                  to="/#contact"
+                  className="inline-flex items-center justify-center gap-2 rounded border border-white/15 px-7 py-4 font-semibold text-white transition hover:border-red-600 hover:text-red-500"
                 >
-                  Need Custom Work?
+                  Ask About Beta Access <FiArrowRight />
                 </Link>
+              </div>
+
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {betaHighlights.map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.03] p-4 text-sm text-gray-300"
+                  >
+                    <FiCheckCircle className="mt-1 shrink-0 text-red-500" />
+                    {item}
+                  </div>
+                ))}
               </div>
             </motion.div>
 
@@ -170,18 +195,28 @@ const DisplayOS = () => {
                 </div>
               </div>
 
-              <div className="mt-5 rounded-xl border border-red-600/30 bg-red-950/20 p-5">
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-red-400">
-                  In Development
-                </p>
-                <p className="mt-2 text-gray-400">
-                  Planned release window: 2026
-                </p>
+              <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-xl border border-red-600/30 bg-red-950/20 p-5">
+                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-red-400">
+                    Beta Ready
+                  </p>
+                  <p className="mt-2 text-gray-400">
+                    Now preparing private beta testing.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-5">
+                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-gray-400">
+                    Platform
+                  </p>
+                  <p className="mt-2 text-gray-300">
+                    Web-based SaaS display system.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>
 
-          {/* What It Is */}
           <motion.section
             variants={fadeUp}
             initial="hidden"
@@ -199,23 +234,24 @@ const DisplayOS = () => {
 
             <div className="mt-6 grid gap-8 leading-8 text-gray-400 lg:grid-cols-2">
               <p>
-                DisplayOS is being designed as a customizable digital signage
-                platform for businesses that want to use TVs or screens to show
-                important information. Instead of relying on printed signs,
-                static images, or manually changed slides, businesses will be
-                able to manage display content through a web-based system.
+                DisplayOS is a customizable digital signage platform for
+                businesses that want to use TVs, monitors, tablets, or browser
+                screens to show important information. Instead of relying on
+                printed signs, outdated posters, static images, or manually
+                changed slides, businesses can manage display content through a
+                web-based system.
               </p>
 
               <p>
                 The goal is to make digital displays easier for small businesses
-                to use. A shop owner could update wait times, show promotions,
-                feature services, display announcements, or rotate images
-                without needing a developer to change the screen every time.
+                to use. A business owner can update wait times, show promotions,
+                feature services, display announcements, publish QR codes, and
+                adjust information without needing a developer to change the
+                screen every time.
               </p>
             </div>
           </motion.section>
 
-          {/* Features */}
           <motion.section
             variants={staggerContainer}
             initial="hidden"
@@ -225,7 +261,7 @@ const DisplayOS = () => {
           >
             <div className="mb-12 text-center">
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-red-500">
-                Planned Features
+                Platform Features
               </p>
 
               <h2 className="text-3xl font-bold md:text-5xl">
@@ -233,8 +269,8 @@ const DisplayOS = () => {
               </h2>
 
               <p className="mx-auto mt-5 max-w-3xl text-gray-400">
-                DisplayOS is planned around the types of information businesses
-                actually need to show on a daily basis.
+                DisplayOS is built around the types of information businesses
+                actually need to show every day.
               </p>
             </div>
 
@@ -262,7 +298,6 @@ const DisplayOS = () => {
             </div>
           </motion.section>
 
-          {/* Use Cases */}
           <motion.section
             variants={fadeUp}
             initial="hidden"
@@ -281,8 +316,8 @@ const DisplayOS = () => {
                 </h2>
 
                 <p className="mt-5 leading-8 text-gray-400">
-                  DisplayOS is planned to help businesses turn ordinary screens
-                  into useful, branded, constantly updated communication tools.
+                  DisplayOS helps businesses turn ordinary screens into useful,
+                  branded, constantly updated communication tools.
                 </p>
               </div>
 
@@ -300,7 +335,41 @@ const DisplayOS = () => {
             </div>
           </motion.section>
 
-          {/* CTA */}
+          <motion.section
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="mt-24 grid gap-8 lg:grid-cols-3"
+          >
+            <div className="rounded-2xl border border-white/10 bg-[#080808] p-8">
+              <FiShield className="mb-5 text-5xl text-red-500" />
+              <h3 className="text-2xl font-bold">Draft Protection</h3>
+              <p className="mt-4 leading-7 text-gray-400">
+                Displays stay private while in draft mode and only become
+                publicly accessible after being published.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#080808] p-8">
+              <FiCreditCard className="mb-5 text-5xl text-red-500" />
+              <h3 className="text-2xl font-bold">Stripe Billing</h3>
+              <p className="mt-4 leading-7 text-gray-400">
+                DisplayOS includes Stripe Checkout and Billing Portal support
+                for subscriptions, payment methods, and invoices.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#080808] p-8">
+              <FiWifi className="mb-5 text-5xl text-red-500" />
+              <h3 className="text-2xl font-bold">Live Display Links</h3>
+              <p className="mt-4 leading-7 text-gray-400">
+                Published displays receive public URLs that can be opened on
+                compatible browsers, TVs, monitors, tablets, and display setups.
+              </p>
+            </div>
+          </motion.section>
+
           <motion.section
             variants={fadeUp}
             initial="hidden"
@@ -311,22 +380,32 @@ const DisplayOS = () => {
             <FiTv className="mx-auto mb-5 text-5xl text-red-500" />
 
             <h2 className="text-3xl font-bold md:text-5xl">
-              Want Early Access to DisplayOS?
+              Want to Try DisplayOS?
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-gray-400">
-              DisplayOS is currently in development. Businesses interested in
-              digital displays, smart signage, menus, wait times, announcements,
-              or custom screen systems can reach out to join the early interest
-              list.
+              DisplayOS is preparing for private beta testing. If your business
+              uses a TV, monitor, tablet, lobby screen, waiting room display, or
+              menu board, this may be a good fit.
             </p>
 
-            <a
-              href="/#contact"
-              className="mt-8 inline-flex items-center gap-2 rounded bg-red-600 px-7 py-4 font-semibold text-white transition hover:bg-red-700"
-            >
-              Join Waitlist <FiArrowRight />
-            </a>
+            <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+              <a
+                href={DISPLAYOS_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded bg-red-600 px-7 py-4 font-semibold text-white transition hover:bg-red-700"
+              >
+                Visit DisplayOS <FiExternalLink />
+              </a>
+
+              <Link
+                to="/#contact"
+                className="inline-flex items-center justify-center gap-2 rounded border border-white/15 px-7 py-4 font-semibold text-white transition hover:border-red-600 hover:text-red-500"
+              >
+                Ask About Beta Access <FiArrowRight />
+              </Link>
+            </div>
           </motion.section>
         </section>
       </main>
