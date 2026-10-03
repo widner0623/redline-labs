@@ -33,6 +33,26 @@ const statusStyles = {
 
 const projects = [
   {
+    title: "J Vicks Music",
+    category: "Music Website",
+    status: "Live",
+    description:
+      "A modern music website designed to showcase an artist's work, provide a seamless experience across desktop and mobile devices, and facilitate fan engagement.",
+    image: "https://j-vicks-music.vercel.app/preview.png",
+    liveUrl: "https://j-vicks-music.vercel.app/",
+    codeUrl: "https://github.com/widner0623/JVicks_music",
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Vercel",
+      "Render",
+    ],
+  },
+  {
     title: "Double A Insurance Agency",
     category: "Insurance Website",
     status: "Live",
