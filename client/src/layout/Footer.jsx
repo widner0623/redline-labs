@@ -33,10 +33,41 @@ function Footer() {
             <h3 className="mb-5 font-semibold">Products</h3>
 
             <ul className="space-y-3 text-gray-400">
-              <li><Link to="/website-audit" className="hover:text-red-500 transition">Website Audit</Link></li>
-              <li><Link to="/shop" className="hover:text-red-500 transition">Shop</Link></li>
-              <li><Link to="/templates" className="hover:text-red-500 transition">Templates</Link></li>
-              <li><Link to="/displayos" className="hover:text-red-500 transition">DisplayOS</Link></li>
+              <li>
+                <Link
+                  to="/website-audit"
+                  className="hover:text-red-500 transition"
+                >
+                  Website Audit
+                </Link>
+              </li>
+
+              <li>
+                <span
+                  className="cursor-not-allowed opacity-50"
+                  title="Coming soon"
+                >
+                  Shop
+                </span>
+              </li>
+
+              <li>
+                <Link
+                  to="/templates"
+                  className="hover:text-red-500 transition"
+                >
+                  Templates
+                </Link>
+              </li>
+
+              <li>
+                <span
+                  className="cursor-not-allowed opacity-50"
+                  title="Coming soon"
+                >
+                  DisplayOS
+                </span>
+              </li>
             </ul>
           </div>
 

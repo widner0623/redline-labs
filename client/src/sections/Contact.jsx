@@ -114,7 +114,7 @@ function Contact() {
         </div>
 
         <div className="mb-20 grid gap-8 md:grid-cols-3">
-          <ContactCard icon={FiMail} label="EMAIL" value="derrick.widner@icloud.com" />
+          <ContactCard icon={FiMail} label="EMAIL" value="derrickwidner04@gmail.com" />
           <ContactCard icon={FiPhone} label="PHONE" value="+1 (270) 363-1784" />
           <ContactCard icon={FiMessageCircle} label="LIVE CHAT" value="Coming Soon. . ." />
         </div>
